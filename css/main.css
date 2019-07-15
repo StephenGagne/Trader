@@ -1,0 +1,138 @@
+.button {
+    border: 1px solid black;
+    padding: 1%;
+    cursor: pointer;
+    border-radius: 2.5%;
+    background-color: #333;
+    color: white;
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.6s;
+}
+
+.tab {
+    flex-grow: 1;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid black;
+    padding: 1%;
+    background-color: #333;
+    color: white;
+    transition: 0.6s;
+}
+
+.tab:hover {
+    transition: 0.4s;
+    opacity: 1;
+}
+
+.exit {
+    max-width: 3rem;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.masthead {
+    display: flex;
+    height: 80px;
+    background-color: black;
+}
+
+.logo img {
+    height: 100%;
+    object-fit: cover;
+}
+
+main {
+    background-image: url(../img/map-2153535.jpg);
+    height: 2000px;
+}
+
+.popup {
+    z-index: 100;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(240, 240, 240, 0.95);
+    transition: 0.4s;
+    width: 95%;
+    max-width: 1000px;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 16px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border: 1px solid red;
+    margin-bottom: 1%;
+}
+
+
+.window {
+    display: flex;
+    text-align: center;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 30%;
+}
+
+.portrait {
+    margin: 1rem;
+    height: 30vw;
+    width: 30vw;
+    max-height: 300px;
+    max-width: 300px;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-image: url(../img/vendors/1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    overflow: hidden;
+}
+
+
+#vendorName {
+    text-align: center;
+}
+
+.right {
+    flex-basis: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: 1px solid blue;
+}
+
+.row div {
+    flex-basis: 25%;
+    padding: 1%;
+}
+
+.inactive {
+    transition: 0.4s;
+    opacity: 0.6;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trading Game</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <header>
+        <div class="masthead">
+            <div class="logo">
+                <img src="http://placehold.it/100x100" alt="">
+            </div>
+            <h1>Trading Stuff</h1>
+        </div>
+        <div class="menu mainMenu">
+            <div class="tab" id="openMarket">Market</div>
+            <div class="tab" id="openInventory">Inventory</div>
+        </div>
+    </header>
+    <main>
+        <div class="popup hidden" id="market">
+            <div class="menu" id="marketMenu">
+                <div class="tab" id="buy">Buy</div>
+                <div class="tab inactive" id="sell">Sell</div>
+                <div class="tab exit">Exit</div>
+            </div>
+            <div class="window">
+                <div class="left">
+                    <div class="portrait" id="vendorPortrait">
+                    </div>
+                    <h3 id="vendorName">Vendor Name</h3>
+                </div>
+                <div class="right">
+                    <h2>Inventory</h2>
+                    <div class="row">
+                        <p>Item</p>
+                        <p>Price</p>
+                        <p>Quantity</p>
+                        <p id="gold">Player Gold:</p>
+                    </div>
+                    <div id="vendorInventory"> </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup hidden" id="playerScreen">
+            <div class="menu" id="playerMenu">
+                <div class="tab">Inventory</div>
+                <div class="tab inactive">Trade Routes</div>
+                <div class="tab exit">Exit</div>
+            </div>
+            <div class="window">
+                <div class="left">
+                    <div class="portrait" id="playerPortrait">
+                    </div>
+                    <h3 id="playerName">Player Name</h3>
+                    <p id="money">Gold</p>
+                </div>
+                <div class="right">
+                    <h2>Inventory</h2>
+                    <div class="row">
+                        <p>Item</p>
+                        <p>Quantity</p>
+                    </div>
+                    <div id="playerInventory"> </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="./js/game.js"></script>
+</body>
+
+</html>
