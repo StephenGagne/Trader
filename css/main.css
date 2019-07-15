@@ -40,6 +40,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 10;
 }
 
 .masthead {
@@ -53,9 +54,22 @@ header {
     object-fit: cover;
 }
 
-main {
-    background-image: url(../img/map-2153535.jpg);
-    height: 2000px;
+
+#map {
+    width: 100%;
+    position: relative;
+    top: 124px;
+    left: -7px;
+    z-index: 0;
+    display: grid;
+    grid-template-rows: repeat(10, calc(10vw - 2.5px));
+    grid-template-columns: repeat(10, calc(10vw - 2.5px));
+    background-image: url(../img/paper-bg.jpg);
+    background-size: 40%;
+}
+
+.cell {
+    border: 1px solid black;
 }
 
 .popup {
