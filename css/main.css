@@ -1,3 +1,7 @@
+body {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
 .button {
     border: 1px solid black;
     padding: 1%;
@@ -13,15 +17,30 @@
     transition: 0.6s;
 }
 
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 1%;
+}
+
+.mainMenu {
+    box-shadow: 0px 5px 15px #333;
+}
+
 .tab {
     flex-grow: 1;
     text-align: center;
     cursor: pointer;
-    border: 1px solid black;
     padding: 1%;
-    background-color: #333;
+    background: linear-gradient(#333, #444, #333);
     color: white;
     transition: 0.6s;
+    border-right: 1px solid black;
+}
+
+.tab:last-child {
+    border-right: none;
 }
 
 .tab:hover {
@@ -30,6 +49,7 @@
 }
 
 .exit {
+    background: linear-gradient(#802, #a02, #802);
     max-width: 3rem;
 }
 
@@ -54,7 +74,6 @@ header {
     object-fit: cover;
 }
 
-
 #map {
     width: 100%;
     position: relative;
@@ -69,7 +88,7 @@ header {
 }
 
 .cell {
-    border: 1px solid black;
+    border: 0.05vw solid #866;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -79,6 +98,7 @@ header {
 
 .cell img {
     height: 9vw;
+    filter: saturate(10%) sepia(50%) drop-shadow(0px 5px 10px #866);
 }
 
 .cell:hover {
@@ -102,15 +122,6 @@ header {
     transform: translateX(-50%);
     border-radius: 16px;
 }
-
-.menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    border: 1px solid red;
-    margin-bottom: 1%;
-}
-
 
 .window {
     display: flex;
@@ -163,5 +174,5 @@ header {
 
 .inactive {
     transition: 0.4s;
-    opacity: 0.6;
+    opacity: 0.8;
 }
