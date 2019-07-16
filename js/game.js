@@ -249,5 +249,4 @@ window.addEventListener('click', function (e) {
         const thisWindow = e.target.closest(".popup")
         thisWindow.classList.add('hidden')
     }
-
 })
