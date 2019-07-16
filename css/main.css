@@ -2,6 +2,10 @@ body {
     font-family: 'Josefin Sans', sans-serif;
 }
 
+h1 {
+    color: white;
+}
+
 .button {
     border: 1px solid black;
     padding: 1%;
@@ -53,6 +57,10 @@ body {
     max-width: 3rem;
 }
 
+.exit:hover {
+    filter: brightness(1.2);
+}
+
 header {
     display: flex;
     flex-direction: column;
@@ -88,8 +96,10 @@ header {
 }
 
 .cell {
+    position: relative;
     border: 0.05vw solid #866;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     cursor: pointer;
@@ -97,15 +107,41 @@ header {
 }
 
 .cell img {
+    z-index: 1;
     height: 9vw;
-    filter: saturate(10%) sepia(50%) drop-shadow(0px 5px 10px #866);
+    filter: opacity(70%) saturate(10%) sepia(50%) drop-shadow(0px 5px 10px #866);
 }
+
 
 .cell:hover {
     transform: scale(1.01);
     z-index: 2;
     box-shadow: 5px 5px 15px #333;
     transition: 0.3s;
+}
+
+.colour:before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    transition: 0.4s;
+}
+
+.red:before {
+    background-color: rgba(168, 38, 38, 0.274);
+}
+
+.red:hover:before {
+    background-color: rgba(168, 38, 38, 0.6);
+}
+
+.blue:before {
+    background-color: rgba(38, 38, 168, 0.274);
+}
+
+.blue:hover:before {
+    background-color: rgba(38, 38, 168, 0.6);
 }
 
 .popup {

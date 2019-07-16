@@ -95,17 +95,31 @@ $sell.addEventListener('click', function () {
     $sell.classList.toggle('inactive')
 })
 
-$openMarket.addEventListener('click', function () {
+function openMarket() {
     $playerScreen.classList.add('hidden')
     $market.classList.remove('hidden')
     populateVendorInventory(activeVendor.id)
+}
+
+merchant1.addEventListener('click', function () {
+    activeVendor = vendors[0]
+    openMarket()
 })
+
+merchant2.addEventListener('click', function () {
+    activeVendor = vendors[1]
+    openMarket()
+})
+
+$openMarket.addEventListener('click', openMarket)
 
 $openInventory.addEventListener('click', function () {
     populatePlayerInventory()
     $playerScreen.classList.remove('hidden')
     $market.classList.add('hidden')
 })
+
+
 
 
 function populateVendorInventory(vendorID) {
