@@ -29,7 +29,7 @@ h1 {
 }
 
 .mainMenu {
-    box-shadow: 0px 5px 15px #333;
+    box-shadow: 0px 5px 15px rgba(51, 30, 10, 0.6);
 }
 
 .tab {
@@ -86,11 +86,10 @@ header {
     width: 100%;
     position: relative;
     top: 100px;
-    left: -7px;
     z-index: 0;
     display: grid;
-    grid-template-rows: repeat(10, calc(10vw - 2.5px));
-    grid-template-columns: repeat(10, calc(10vw - 2.5px));
+    grid-template-rows: repeat(10, calc(10vw - 2px));
+    grid-template-columns: repeat(10, calc(10vw - 2px));
     background-image: url(../img/paper-bg.jpg);
     background-size: 40%;
 }
@@ -112,6 +111,7 @@ header {
 }
 
 .cell:hover {
+    background-color: rgba(200, 180, 180, 0.1);
     transform: scale(1.01);
     z-index: 2;
     box-shadow: 5px 5px 15px rgba(51, 30, 10, 0.6);
@@ -119,6 +119,7 @@ header {
 }
 
 .cell:active {
+    transform: scale(1);
     box-shadow: 2px 2px 10px rgba(51, 30, 10, 0.6) inset;
     background-color: rgba(51, 30, 10, 0.1);
 }
